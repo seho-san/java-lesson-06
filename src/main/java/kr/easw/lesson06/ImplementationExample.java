@@ -41,15 +41,21 @@ public class ImplementationExample {
     }
 
 
-    static class Cat {
+    static class Cat implements Animal{
         private void meow() {
             System.out.println("Meow!");
         }
+        public void speak(){
+            meow();
+        }
     }
 
-    static class Horse {
+    static class Horse implements Animal{
         private void neigh() {
             System.out.println("Neigh!");
+        }
+        public void speak(){
+            neigh();
         }
     }
 }
